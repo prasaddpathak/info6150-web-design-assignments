@@ -1,0 +1,50 @@
+.footer-container {
+    background-color: #1ABC9C; 
+    height: 40vh; 
+    margin: 20px 5px 0px 5px; 
+    color: white;
+}
+
+.footer-title {
+    margin: 0px 100px; 
+    color: white; 
+    font-weight: bold;
+}
+
+.footer-subsections {
+    margin: 0px 200px;
+}
+
+.footer-subsections div {
+    margin: 0px 20px;
+}
+
+.footer-links {
+    color:white; 
+    text-decoration: none; 
+    font-size: 15px;
+}
+
+.footer-container-right {
+    margin: 0px 20px; 
+    font-size: 15px; 
+    line-height: 33px;
+}
+
+.footer-links-right {
+    border-bottom: white; 
+    border-bottom: solid;
+}
+
+.footer-copyright-container {
+    background-color: #207060; 
+    height: 5vh; 
+    margin: 0px 5px; 
+    color: white; 
+    font-size: 10px;
+}
+
+.footer-copyright-content {
+    margin: 0px 220px; 
+    padding-top: 10px;
+}

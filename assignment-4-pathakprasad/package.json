@@ -1,0 +1,25 @@
+{
+  "name": "assignment-4-pathakprasad",
+  "version": "1.0.0",
+  "description": "1. The goal of this assignment is to learn about CSS positioning, Grid layout / Flexbox, SCSS features like variables, mixins, inheritance, loops, functions, math operations, etc.\r 2. SCSS should be organized in multiple files based on UI features, common elements, and themes.\r 3. These SCSS files should be added to a main.scss file and this should be converted to a .css file using sass.\r 4. The navbar should be sticky/fixed.\r 5. JavaScript is not required. This will not add more points to this assignment.\r 6. Your site should look very close to the attached file.\r 7. You should not use the table element for formatting.\r 8. You should add code documentation using SCSS comments.\r 9. If any asset required for the page is missing then use the below links for placeholder assets.\r 10. Can use icons from material design https://material.io/tools/icons/?style=baseline even if it doesn't match the UI mock.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass scss/main.scss dist/main.css",
+    "start": "nodemon -e scss -x \"npm run sass\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neu-mis-info6150-spring-2022/assignment-4-pathakprasad.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neu-mis-info6150-spring-2022/assignment-4-pathakprasad/issues"
+  },
+  "homepage": "https://github.com/neu-mis-info6150-spring-2022/assignment-4-pathakprasad#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "sass": "^1.49.7"
+  }
+}

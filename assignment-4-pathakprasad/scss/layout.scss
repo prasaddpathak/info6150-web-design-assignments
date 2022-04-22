@@ -1,0 +1,512 @@
+/*  
+    Author:     Prasad A. Pathak
+    NEU ID:     002925486
+    Email:      pathak.pra@northeastern.edu
+    Subject:    INFO6150 - Web Design and UX
+    Purpose:    SCSS File containing code required for the layout of the webpage
+*/
+
+//Body Layout
+body {
+    font-family: $font;
+    @include margin-layout(0,0,0,0);
+}
+
+//Font Layouts
+.xsmall-font {
+    font-size: 10px;
+}
+
+.small-font {
+    font-size: 12px;
+}
+.medium-font {
+    font-size: 14px;
+}
+.large-font {
+    font-size: 20px;
+}
+.xlarge-font {
+    font-size: 30px;
+}
+.xxlarge-font {
+    font-size: 40px;
+}
+
+.bold-font {
+    font-weight: bold;
+}
+
+//Width Layouts
+.width-400 {
+    width: 400px;
+}
+.width-300 {
+    width: 300px;
+}
+.width-200 {
+    width: 200px;
+}
+.width-100 {
+    width: 100px;
+}
+.width-50 {
+    width: 50px;
+}
+
+//Text Layouts
+.text-align-center {
+    text-align: center;
+}
+.text-align-left {
+    text-align: left !important;
+}
+.text-align-right {
+    text-align: right;
+}
+
+//Loop to create grid layouts
+@for $i from 2 to 6 {
+    @include grid-layout($i);
+}
+
+.two-grid-left {
+    @include display-layout(grid);
+    grid-template-columns: 40% 60%;
+}
+
+.two-grid-right {
+    @include display-layout(grid);
+    grid-template-columns: 60% 40%;
+}
+
+// /Position Layouts
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+//Contains SCSS required for the navigation bar
+.nav-bar {
+    @extend .two-grid;
+    @include padding-layout(20,10,10,20);
+    @include position-layout(fixed);
+    @include background-color(white);
+    @include margin-layout(0,0,0,0);
+    width: 100%;
+    height: 80px;
+    z-index: 999;
+    top: 0px;
+    
+    .nav-bar-left {
+        @include margin-layout(0,0,0,100);
+    }
+
+    .nav-bar-right {
+        @include margin-layout(0,100,0,0);
+        @include text-align(right);
+        @include word-layout(10);
+    }
+}
+
+//Contains SCSS required for Fold 1
+.fold1-container {  
+    @extend .two-grid;
+    background-image: linear-gradient(to bottom, $light-green, white);
+    @include margin-layout (110,10,10,10); 
+    height: 600px;
+
+    .fold1-station-img {
+        @include position-layout(relative);
+        height: 550px; 
+        z-index: 0; 
+        @include padding-layout (30,0,0,500);
+    }
+    
+    .fold1-station-tint-img {
+        @include position-layout(absolute);
+        height: 550px; 
+        z-index: 0; 
+        @include padding-layout (30,0,0,505);
+    }
+    
+    .fold1-train-img {
+        @include position-layout(absolute);
+        height: 170px; 
+        z-index: 0; 
+        @include padding-layout(410,0,0,925);
+    }
+    
+    .fold1-input-container {
+        @include position-layout(absolute);
+        @include margin-layout(50,30,60,100);
+        @include border-layout(1,solid,40,transparent);
+        @include background-color(whitesmoke);
+        padding-top: 20px;
+        z-index: 9;
+        box-shadow: 2px 2px 10px 1px $green;
+    }
+    
+    .fold1-input-top {
+        @include display-layout(flex);
+        @include margin-layout(20,40,0,40);
+        @include justify-content(space-between);
+        align-self: center;
+    }
+    
+    .fold1-input-bottom {
+        border-radius: 10px 10px 0px 0px;
+        @include margin-layout(0,100,0,100); 
+        @include padding-layout(5,10,10,5);
+        @include background-color($blue);
+        @include justify-content(space-between);
+        @include display-layout(flex);
+        text-align: center;
+        box-shadow: 2px 2px 5px 3px grey;
+    
+    }
+    
+    .fold1-input-bottom-details {
+        @include margin-layout(0,40,0,40);
+        @include padding-layout(20,20,20,20);
+        @include border-layout(0,none,15,transparent);
+        box-shadow: 2px 2px 10px 3px grey;
+        div {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    
+    .fold1-right-container {
+        @include margin-layout(100,200,0,30);
+        @include background-color(transparent);
+        @include font-color(white);
+        z-index: 10;
+    }
+}
+
+//Contains SCSS required for Fold 2
+.fold2-container {
+    height: auto;
+    @include margin-layout(50,100,30,100);
+
+    .fold2-cards-container {
+        @extend .three-grid;
+        @include padding-layout(20,50,20,50);
+    }
+    
+    .fold2-cards {
+        @include border-layout(0,none,15,transparent);
+        @include margin-layout(15,15,15,15);
+        @include padding-layout(10,10,10,10);
+        height: 250px;
+        box-shadow: 3px 3px 20px 2px grey;
+        
+        .fold2-cars-train-image{
+            position: absolute; 
+            z-index: 50;
+            @include padding-layout(5,0,0,270);
+        }
+
+        .two-grid {
+            @include padding-layout(0,10,0,20);
+            line-height: 22px;
+        }
+        img {
+            @include position-layout(relative);
+            max-width: 90%; 
+            max-height: 100%; 
+            @include border-layout(0,none,15,none);
+            z-index: 0;   
+        }
+        .fold2-cards-rating {
+            @include background-color($blue);
+            @include padding-layout(5,5,5,5);
+            @include font-color(white);
+            @include margin-layout(5,12,10,20);
+        }
+        .fold2-cards-price {
+            @include font-color($green);
+            font-weight: bold;
+        }
+    }
+}
+
+//Contains SCSS required for Fold 3
+.fold3-container {
+    > div {
+        @extend .five-grid;
+    }
+    @include background-color($light-grey);
+    height: 220px;
+    @include margin-layout(0,0,50,0);
+    @include padding-layout(30,50,30,50);
+
+    .fold3-cards {
+        width: 200px;
+        @include border-layout(0,none,15,transparent);
+        @include margin-layout(20,20,20,20);
+        @include padding-layout(15,15,15,15);
+        @include background-color(white);
+    }
+
+    .fold3-next-arrow {
+        position: absolute;
+        img {
+            position: relative;
+            top: 60px;
+            left: 1350px;
+        }
+        img:hover {
+            cursor:pointer;
+        }
+    }
+}
+
+//Contains SCSS required for Fold 4
+.fold4-container {
+    @extend .two-grid;
+    @include margin-layout(20,0,50,50);
+    @include background-color($medium-green);
+    height: 550px; 
+    border-bottom-left-radius: 250px; 
+
+    .fold4-left-section {
+        @include margin-layout(120,0,0,150);
+        @include font-color(white);
+        z-index: 10;
+    }
+    
+    .fold4-left-button {
+        @include padding-layout(15,100,15,100);
+        @include font-layout(22);
+        @include border-layout(0,none,40,transparent);
+        @include font-color($green);
+        font-weight: bold; 
+    }
+
+    .fold4-left-button:hover {
+        cursor: pointer;
+    }
+    
+    .fold4-right-section {
+        @include padding-layout(75,100,75,100);
+    }
+    
+    .fold4-img-budapest {
+        @include position-layout(relative);
+        z-index: 5;
+    }
+    
+    .fold4-img-train {
+        @include position-layout(absolute);
+        height: 140px;
+        z-index: 0; 
+        @include padding-layout(250,0,0,0);
+        transform: translateX(-600px);
+    }
+    .fold4-white-ellipse {
+        position: absolute;
+        img {
+            position: relative;
+            top: 100px;
+            left: 1050px;
+        }
+    }
+    .fold4-grey-ellipse {
+        position: absolute;
+        img {
+            position: relative;
+            top: 250px;
+            left: 1050px;
+        }
+    }
+    .fold4-blue-rectangle {
+        position: absolute;
+        img {
+            position: relative;
+            top: 0px;
+            left: -20px;
+            height: 550px;
+            z-index: -10;
+        }
+    }
+    .fold4-green-ellipse {
+        position: absolute;
+        img {
+            position: relative;
+            top: -100px;
+            left: -100px;
+            height: 500px;
+            z-index: 0;
+        }
+    }
+    .fold4-dark-green-ellipse {
+        position: absolute;
+        img {
+            position: relative;
+            top: 100px;
+            left: 100px;
+            height: 400px;
+            z-index: 1;
+        }
+    }
+    .fold4-repead-grid {
+        position: absolute;
+        img {
+            position: relative;
+            top: 50px;
+            left: 950px;
+            height: 150px;
+        }
+    }
+}
+
+//Contains SCSS required for Fold 5
+.fold5-container {
+    @extend .two-grid;
+    height: 400px; 
+    @include margin-layout(80,100,100,80);
+    @extend .text-align-center;
+
+    .fold-5-left-section {
+        @include padding-layout(0,100,0,100);
+    }
+
+    .fold5-cta-button {
+        @include padding-layout(10,80,10,80);
+        @include font-layout(20);
+        @include border-layout(0,none,40,transparent);
+        @include font-color(white);
+        @extend .bold-font; 
+        @include background-color($blue); 
+    }
+    
+    .fold5-cta-button:hover {
+        cursor: pointer;
+    }
+    
+    .fold5-accordian-container {
+        @include margin-layout(0,60,0,60);
+
+        .fold5-accordian-cards {
+            @extend .text-align-left;
+            @include padding-layout(20,30,20,30);
+            @include border-layout(2,solid,10,$blue);
+            .fold5-accordian-cards-sign {
+                position: absolute; 
+                z-index: 50;
+                @include padding-layout(0,0,0,480);
+            }
+            .fold5-accordian-cards-sign:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    
+    
+}
+
+//Contains SCSS required for Fold 6
+.fold6-container {
+    @extend .two-grid-right;
+    height: 450px; 
+    @include margin-layout(80,100,20,100);
+    @extend .text-align-center;
+
+    .fold6-left-section {
+        @extend .text-align-left;
+        @include margin-layout(50,80,50,80); 
+    }
+}
+
+.fold6-right-section {
+    @extend .text-align-right;
+    @include margin-layout(0,100,50,100);
+    
+    .fold6-nav-button {
+        height: 55px; 
+        width: 45px; 
+        @include background-color($blue);
+        @include font-color(white); 
+        @include font-layout(30);
+        @include border-layout(0,none,5,transparent);
+    } 
+
+    .fold6-nav-button:hover {
+        cursor: pointer;
+    }
+}
+
+//Contains SCSS required for Footer Section
+.footer-container {
+    @include background-color($medium-green); 
+    height: 300px; 
+    @include margin-layout(10,5,0,5);
+    @include padding-layout(10,0,10,0);
+    @include font-color(white);
+
+    .footer-title {
+        @include margin-layout(0,100,0,100);
+        @include font-color(white);
+        @extend .bold-font;
+    }
+    
+    .footer-subsections {
+        @extend .three-grid;
+        @include margin-layout(0,200,0,200);
+    }
+    
+    .footer-subsections div {
+        @include margin-layout(0,20,0,20);
+    }
+    
+    .footer-links {
+        @include font-color(white);
+        @include font-layout(15);
+        line-height: 22px;
+        text-decoration: none; 
+    }
+    
+    .footer-container-right {
+        @include margin-layout(0,20,0,20);
+        @include font-layout(15);
+        @include line-height(33);
+    }
+    
+    .footer-links-right {
+        @extend .two-grid-right;
+        width: 100%;
+        border-bottom: solid;
+        border-bottom-color: rgba($color: #FFFFFF, $alpha: 0.5);
+        margin: 0px;
+    }
+}
+
+.footer-copyright-container {
+    @include background-color($dark-green);
+    height: 30px; 
+    @include margin-layout(0,5,0,5);
+    @include font-color(white);
+    @include font-layout(10);
+
+    .footer-copyright-content {
+        @extend .two-grid-right;
+        @include margin-layout(0,220,0,220);
+        padding-top: 10px;
+    }
+}
+
+
+
+  
+
+
+
+
+
+
+

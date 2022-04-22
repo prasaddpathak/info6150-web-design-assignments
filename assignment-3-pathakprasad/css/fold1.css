@@ -1,0 +1,67 @@
+.fold1-container {
+    background-color: #ABEBC6; 
+    margin: 10px 10px; 
+    height: 80vh; 
+}
+
+.fold1-station-img {
+    height: 70vh; 
+    z-index: 0; 
+    padding-top: 30px;
+    padding-left: 500px;
+}
+
+.fold1-train-img {
+    height: 20vh; 
+    z-index: 0; 
+    padding-top: 400px;
+    padding-left: 933px;
+}
+
+.fold1-input-container {
+    margin: 50px 30px 60px 100px; border-radius: 40px;
+    background-color: whitesmoke;
+    z-index: 10;
+}
+
+.fold1-input-top {
+    margin: 50px 40px 0px 40px;
+}
+
+.fold1-input-bottom {
+    border-radius: 10px 10px 0px 0px; margin:0px 100px; 
+    padding:5px 10px;
+    background-color:#2A29CE ;
+}
+
+.fold1-input-bottom-details {
+    margin: 0px 40px 00px 40px; 
+    padding: 20px 20px; 
+    border-radius: 15px; 
+    border-width: 1px; 
+    border-color: black; 
+    border-style: solid;
+}
+
+.fold1-input-button {
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    padding: 8px 120px; 
+    font-size: 15px; 
+    color: white; 
+    background-color: #2A29CE; 
+    border-radius: 10px;
+}
+
+.fold1-right-container {
+    margin-right: 200px; 
+    margin-top: 100px;
+    margin-left: 30px;
+    z-index: 10;
+}
+
+.fold1-right-container-button {
+    border-radius: 25px;
+    padding: 5px 25px; 
+    background-color: #1ABC9C; 
+}

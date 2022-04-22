@@ -1,0 +1,375 @@
+<!-- 
+    Author:     Prasad A. Pathak
+    NEU ID:     002925486
+    Email:      pathak.pra@northeastern.edu
+    Subject:    INFO6150 - Web Design and UX
+    Purpose:    Assignment 3 - Add CSS to the Assignment 2 HTML Page. 
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Greenline</title>
+    <link rel="icon" href="img/-train_90433@2x.png" type="image/icon type">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <!-- Navbar/Header Section: Contains Logo and various dropdown and login elements. Used two coloumn grid  -->
+    <div class="two-grid margin-20-10">
+        <div class="margin-left-100">
+            <img src="img/Group 16059.png" alt="">
+        </div>
+        <div class="header-dropdowns margin-right-100">
+            
+            <Span>
+                <img src="img/gb.png" >
+            </Span>
+            <select class="border-style-none" name="currencies" id="currencies">
+                <option value="dollar">EN/USD</option>
+                <option value="pound">EN/GBP</option>
+                <option value="euro">EN/EUR</option>
+            </select>
+            <Span>Business</Span>
+            <Span>Help</Span>
+            <Span>Register</Span>
+            <button class="sign-in-button">Sign In</button>
+            <br> <br>
+            <select class="medium-font border-style-none" name="UK Trains" id="uktrains">
+                <option value="uk-trains">UK Trains</option>
+                <option value="manchester">Manchester</option>
+                <option value="london">London</option>
+                <option value="lanshire">Lanshire</option>
+                <option value="yolkshire">Yolkshire</option>
+            </select>
+            <select class="medium-font border-style-none" name="European Trains" id="eutrains" >
+                <option value="eutrains">European Trains</option>
+                <option value="munich">Munich</option>
+                <option value="paris">Paris</option>
+                <option value="porto">Porto</option>
+            </select>
+            <select class="medium-font border-style-none" name="Train Companies" id="companies" >
+                <option value="train-companies">Train Companies</option>
+                <option value="elron">Elron</option>
+                <option value="eurostar">Eurostar</option>
+                <option value="irish-rail">Irish Rail</option>
+            </select>
+            <select class="medium-font border-style-none" name="Popular Journeys" id="companies" >
+                <option value="pop-journeys">Popular Journeys</option>
+                <option value="munmad">Munich-Madrid</option>
+                <option value="lonpar">London-Paris</option>
+                <option value="scolon">Scotland-London</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Fold 1: Contains Input boxes for train selection on the left and CTA button at the right. Used two coloumn grid -->
+    <div class="two-grid fold1-container">
+        <img src="img/station.png" alt="" class="position-relative fold1-station-img" >
+        <img src="img/nick-page-1.png" alt="" class="position-absolute fold1-station-img" >
+        <img src="img/trian_PNG-1.png" alt="" class="position-absolute fold1-train-img" >
+        <div class="position-absolute fold1-input-container">
+            <div class="display-flex justify-content-space-bw fold1-input-top">
+                <label for="from" class="medium-font">From</label>
+                <input type="text" name="From" id="from" placeholder="Departing from" size="25" required>
+                <img src="img/arrows-couple.png" height=20px width=20px >
+                <label for="to" class="medium-font">To</label>
+                <input type="text" name="From" id="to" placeholder="Arriving at" size="25" required>
+            </div> 
+            <div class="display-flex justify-content-space-bw fold1-input-top">
+                <input checked type="checkbox" name="via" id="via">
+                <label for="via" class="small-font"> Via/Avoid</label>
+                <select name="via-avoid" id="va">
+                    <option value="avoid">Avoid</option>
+                    <option value="via">Via</option>
+                </select>
+                <input class="width-300" type="text" name="station" id="station" placeholder="Enter Station..." size="50">
+            </div>
+            <br><hr>
+            <br>
+            <div class=" fold1-input-bottom justify-content-space-bw display-flex text-align-center">
+                <button class="background-color-transparent border-color-transparent font-color-white text-align-center">One Way</button>
+                <button class="background-color-green border-color-transparent font-color-white text-align-center">Return</button>
+                <button class="background-color-transparent border-color-transparent font-color-white text-align-center">Open Return</button>
+                <button class="background-color-transparent border-color-transparent font-color-white text-align-center">Seasons</button>
+            </div>
+            <div class="fold1-input-bottom-details">
+                <div class="display-flex justify-content-space-bw">
+                    <label for="from" class="medium-font">Out</label>
+                    <input type="date" name="Out" id="out" value="2022-06-16">
+                    <label for="to" class="medium-font">Return</label>
+                    <input type="date" name="Return" id="return" value="2022-06-16">
+                </div>
+                <br>
+                <div class="display-flex justify-content-space-bw">
+                    <select name="leaving" id="leaving">
+                        <option value="leavingat">Leaving at</option>
+                        <option value="arrivingat">Arriving at</option>
+                    </select>
+                    <img src="img/clock.png" width="20px" >
+                    <input type="time" name="hour" id="hour" value="16:30" required>
+                    <select name="leaving" id="leaving">
+                        <option value="leavingat">Leaving at</option>
+                        <option value="arrivingat">Arriving at</option>
+                    </select>
+                    <img src="img/clock.png" width="20px" >
+                    <input type="time" name="hour" id="hour" value="13:30" required>
+                </div>
+                <br>
+                <div class="display-flex justify-content-space-bw">
+                    <label for="pass" class="medium-font">Add Passengers</label>
+                    <select class="width-300" name="pass" id="pass" >
+                        <option value="pass1" >2 adult, 2Kids(16+), 2Kids(18+)</option>
+                    </select>
+                </div>
+            </div> 
+            
+            <div class="text-align-center">
+                <button class="fold1-input-button"> Get Time & Tickets</button>
+            </div>
+
+        </div>
+        <div class="fold1-right-container background-color-transparent font-color-white">
+            <span class="xlarge-font">Explore Europe effortlessly by train and bus</span>
+            <br><br><br>
+            <span class="large-font">Save 61% on average when you book in advance*</span>
+            <br><br><br>
+            <button class="fold1-right-container-button large-font border-color-transparent font-color-white">Learn More</button>
+        </div>
+    </div>
+
+    <!-- Fold 2: Contains cards for multiple trips (future carousel implementation) and a CTA button to view all rides. Used three column grid -->
+    <div class="fold2-container margin-left-100 margin-right-100">
+        <div class="three-grid fold2-cards-container">
+            <div class="fold2-cards">
+                <div class="text-align-center">
+                    <img src="img/london.jpg" alt="">
+                </div>
+                <br>
+                <div class="two-grid">
+                    <div>
+                        <span class = "text-align-left">London to Liverpool</span> 
+                        <br>
+                        <span>from $75.08</span>
+                    </div>
+                    <div class = "text-align-right">
+                        <span class = "fold2-cards-rating">7.0</span>
+                        <span >Good <br>Reviews 350</span>
+                    </div>
+                </div>
+            </div>
+            <div class="fold2-cards">
+                <div class="text-align-center">
+                    <img src="img/london.jpg" alt=""  >
+                </div>
+                <br>
+                <div class="two-grid">
+                    <div>
+                        <span class = "text-align-left">London to Liverpool</span> 
+                        <br>
+                        <span>from $75.08</span>
+                    </div>
+                    <div class = "text-align-right">
+                        <span class = "fold2-cards-rating">7.0</span>
+                        <span >Good <br>Reviews 350</span>
+                    </div>
+                </div>
+            </div>
+            <div class="fold2-cards">
+                <div class="text-align-center">
+                    <img src="img/london.jpg" alt=""  >
+                </div>
+                <br>
+                <div class="two-grid">
+                    <div>
+                        <span class = "text-align-left">London to Liverpool</span> 
+                        <br>
+                        <span>from $75.08</span>
+                    </div>
+                    <div class = "text-align-right">
+                        <span class = "fold2-cards-rating">7.0</span>
+                        <span >Good <br>Reviews 350</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-align-center">
+            <img src="img/Group 9846.png" alt="" height = "15px">
+        </div>
+        <div class="text-align-center">
+            <button class="fold2-viewall-button">View All</button>
+        </div>
+    </div>
+
+    <!-- Fold 3: Contains cards for features of Greenline (future carousel implementation). Used five column grid   -->
+    <div class="fold3-container">
+        <div class="five-grid">
+            <div class = "fold3-cards">
+                <br>
+                <img src="img/1@2x.png" alt="" height="40px">
+                <br><br>
+                <span class = "large-font">Compare</span>
+                <br>
+                <span class="small-font">Compare cheap prices for train and bus tickets</span>
+            </div>
+            <div class = "fold3-cards">
+                <br>
+                <img src="img/-train_90433@2x.png" alt="" height="40px">
+                <br><br>
+                <span class = "large-font">Travel</span>
+                <br>
+                <span class="small-font">Travel thousands of destinations in and across 45 countries</span>
+            </div>
+            <div class = "fold3-cards">
+                <br>
+                <img src="img/XMLID_91_@2x.png" alt="" height="40px">
+                <br><br>
+                <span class = "large-font">Join People</span>
+                <br>
+                <span class="small-font">Join millions of people who use us everyday</span>
+            </div>
+            <div class = "fold3-cards">
+                <br>
+                <img src="img/1@2x.png" alt="" height="40px">
+                <br><br>
+                <span class = "large-font">Support</span>
+                <br>
+                <span class="small-font">Customer service on hand every step of the way</span>
+            </div>
+            <div class = "fold3-cards">
+                <br>
+                <img src="img/-train_90433@2x.png" alt="" height="40px">
+                <br><br>
+                <span class = "large-font">Customer</span>
+                <br>
+                <span class="small-font">Our differentiates customer focused features and unique capabilities.</span>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Fold 4: Contains a CTA button on the left to get more details and a image combination on the left. Used two column grid -->
+    <div class="two-grid fold4-container">
+        <div class="fold4-left-section">
+            <span class="xxlarge-font">Explore Europe effortlessly by train and bus</span>
+            <br><br><br>
+            <span class = "large-font">Save 61% on average when you book in advance*</span>
+            <br><br><br>
+            <button class="fold4-left-button">
+                Get More Details 
+            </button>
+        </div>
+        
+        <div class="fold4-right-section">
+            <img src="img/budapest.png" alt="" width="500px" class="fold4-img-budapest">
+            <img src="img/trian_PNG16650.png" alt="" class="fold4-img-train" >
+        </div>
+    </div>
+
+    <!-- Fold 5: Contains a CTA button on the left for help and FAQs cards on the right (future accordion use case). Used two coloumn grid -->
+    <div class="two-grid-left fold5-container" >
+        <div>
+            <span class="bold-font xxlarge-font">We're here to help</span>
+            <br><br>
+            <span class = "large-font">Find clear <a href="https://www.google.com" target="_blank">FAQs</a> online and customer service available at the end of the phone seven days a week</span>
+            <br><br>
+            <img src="img/illu_laptop_help.png" alt="" height="200px">
+            <br><br><br>
+            <button class="fold5-cta-button">
+                CTA Button 
+            </button>
+        </div>
+        <div class="fold5-accordian-container ">
+            <div class = "fold5-accordian-cards">
+                <span class = "bold-font">Do I need confirm in advance if travelling on a different train?</span>
+                <br> <br>
+                <span> You don't need to let us know if you want to change trains, but you'll need to check the terms of your ticket to see if it'll still be valid for a different train</span>
+            </div>
+            <br><br>
+            <div class = "fold5-accordian-cards">
+                <span class = "bold-font">How much luggage can I take on the train?</span>
+            </div>
+            <br><br>
+            <div class = "fold5-accordian-cards">
+                <span class = "bold-font">How will I receive my tickets?</span>
+            </div>
+            <br><br>
+            <div class = "fold5-accordian-cards">
+                <span class = "bold-font">What do the different seat options mean?</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fold 6: Contains CTA images on the left for Apple and Google and apple app store and an image on the right to display the mobile app verison. Used a two coloumn grid -->
+    <div class="two-grid-right fold6-container">
+        <div class="fold6-left-section">
+            <span class="xxlarge-font bold-font">Europe's leading train and bus app</span>
+            <br><br><br>
+            <span class = "large-font">Keep your trip on track with departure times, platform info, and tickets in the palm of your hand.</span>
+            <br><br><br>
+            <a href="https://apps.apple.com/us/app/mbta-mticket/id560487958" target="_blank"><img src="img/Group 9691.png" alt="" height="80px"></a>
+            <a href="https://play.google.com/store/apps/details?id=com.mbta.mobileapp" target="_blank"><img src="img/Group 9693.png" alt="" height="80px"></a>
+        </div>
+        <div>
+            <img src="img/mobile3@2x.png" alt="" height="450px">
+        </div>
+    </div>
+
+    <!-- Fold 6: (contd.) Contains left-right button on the bottom right. Used a two coloumn grid -->
+    <div class="fold6-right-section">
+        <button class="fold6-nav-button">&lt</button>
+        <button class="fold6-nav-button">&gt</button>
+    </div>
+
+    <!-- Footer: contains footer which multiple links to access different section of the website. Used a three column grid  -->
+    <div class="footer-container">
+        <br>
+        <span class="footer-title">We are happy when our customers are too</span>
+        <br><br><br>
+        <div class="three-grid footer-subsections" >
+            <div>
+                <img src="img/Group 16060.png" alt="" height="40px">
+                <br>
+                <span class="small-font text-align-left">Greenline.com Limited is registered in England and Wales. Company No. 3846791</span>
+                <br><br>
+                <span class="small-font text-align-left">Registered Address: <br> 3rd floor, 120 Holborn, London EC1N 2TD, United Kingdom. VAT number. 791^^ 7261 06.</span>
+                <br> <br>
+                <a href="https://www.facebook.com" target="_blank"><img src="img/Group 9740.png" alt="" height="30px" ></a>
+                <a href="https://www.twitter.com" target="_blank"><img src="img/Group 9741.png" alt="" height="30px" ></a> 
+                <a href="https://www.instagram.com" target="_blank"><img src="img/Group 9742.png" alt="" height="30px" ></a> 
+                <a href="https://www.telegram.org" target="_blank"><img src="img/Group 9743.png" alt="" height="30px" ></a> 
+            </div> 
+            <div class="line-height-medium">
+                <a href="http://www.google.com" target="_blank"  class = "footer-links">About Greenline</a> <br>
+                <a href="http://www.google.com" target="_blank" class = "footer-links">News</a> <br>
+                <a href="http://www.google.com" target="_blank" class = "footer-links">Investors</a> <br>
+                <a href="http://www.google.com" target="_blank" class = "footer-links">Careers</a><br>
+                <a href="http://www.google.com" target="_blank" class = "footer-links">Greenline Partner Solutions</a><br>
+                <a href="http://www.google.com" target="_blank" class = "footer-links">Affiliates and Partnerships</a><br>
+                <a href="http://www.google.com" target="_blank" class = "footer-links">Terms and Conditions / Security</a><br>
+                <a href="http://www.google.com" target="_blank" class = "footer-links">Privacy / Cookies</a><br>
+                <a href="http://www.google.com" target="_blank" class = "footer-links">Modern Slavery Act (UK)</a>
+            </div>
+            <div class="footer-container-right">
+                <span class = "footer-links-right"> Help and useful information</span> <br>
+                <span class = "footer-links-right"> Train and bus companies</span> 
+                <br>
+                <span class = "footer-links-right"> Train journeys in the UK</span> <br>
+                <span class = "footer-links-right"> Trains and buses in Europe</span> <br>
+                <span class = "footer-links-right"> Top destinations</span> 
+                <br>
+                <span class = "footer-links-right"> Stations</span> 
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contains ending note for copyrights  -->
+    <div class="footer-copyright-container">
+        <div class="two-grid-right footer-copyright-content">
+            <div>Copyright &copy 2021 Greenline.com Limited and its affiliated companies. All rights reserved.</div>
+            <div>Terms & Conditions | Privacy Policy</div>
+        </div>
+    </div>
+</body>
+</html>

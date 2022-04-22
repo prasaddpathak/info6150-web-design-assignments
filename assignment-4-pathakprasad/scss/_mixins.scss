@@ -1,0 +1,76 @@
+/*  
+    Author:     Prasad A. Pathak
+    NEU ID:     002925486
+    Email:      pathak.pra@northeastern.edu
+    Subject:    INFO6150 - Web Design and UX
+    Purpose:    SCSS File to store all the mixins required in the SCSS files
+*/
+
+@use 'sass:map';
+
+//Contains SCSS required for creating grid layouts
+@mixin grid-layout ($number) {
+    $number_word : map.get($number_map, $number);
+    .#{$number_word}-grid {
+        @include display-layout(grid);
+        grid-template-columns: repeat($number, unquote(calc(100/$number) + "%"));
+    }
+}
+
+@mixin width-layout ($width) {
+    width: unquote($width+'px');
+}
+
+@mixin font-layout ($font) {
+    font-size: unquote($font+'px');
+}
+
+@mixin display-layout ($display) {
+    display: $display;
+}
+
+@mixin position-layout ($position) {
+    position: $position;
+}
+
+@mixin text-align ($align) {
+    text-align: $align;
+}
+
+@mixin justify-content ($justify) {
+    justify-content: $justify;
+}
+
+@mixin background-color ($color) {
+    background-color: $color;
+}
+
+@mixin font-color ($color) {
+    color: $color;
+}
+
+@mixin line-height ($height) {
+    line-height: unquote($height+'px');
+}
+
+@mixin margin-layout ($top, $right, $bottom, $left) {
+    margin: unquote($top+'px '+$right+'px '+$bottom+'px '+$left+'px ');
+}
+
+@mixin padding-layout ($top, $right, $bottom, $left) {
+    padding: unquote($top+'px '+$right+'px '+$bottom+'px '+$left+'px ');
+}
+
+//Contains SCSS required for creating border layouts
+@mixin border-layout ($size, $style, $radius, $color) {
+    border-width: unquote($size + 'px');
+    border-style: $style;
+    border-radius: unquote($radius + 'px');
+    border-color: $color;
+}
+
+@mixin word-layout ($word) {
+    word-spacing: unquote($word + 'px');
+}
+
+

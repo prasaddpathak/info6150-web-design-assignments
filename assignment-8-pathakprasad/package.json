@@ -1,0 +1,31 @@
+{
+  "name": "assignment-8-pathakprasad",
+  "version": "1.0.0",
+  "description": "ToDo app with MongoDB implementation",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon server.js",
+    "sass": "sass sass/main.scss dist/main.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neu-mis-info6150-spring-2022/assignment-8-pathakprasad.git"
+  },
+  "author": "Prasad Pathak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/neu-mis-info6150-spring-2022/assignment-8-pathakprasad/issues"
+  },
+  "homepage": "https://github.com/neu-mis-info6150-spring-2022/assignment-8-pathakprasad#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "debug": "^4.3.4",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.9",
+    "nodemon": "^2.0.15",
+    "requests": "^0.3.0",
+    "sass": "^1.49.10"
+  }
+}

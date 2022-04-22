@@ -1,0 +1,154 @@
+body {
+    font-family: Helvetica, sans-serif;
+}
+
+/* Added CSS components to use various grids structures in the webpage */
+.two-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.two-grid-left {
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.two-grid-right {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.three-grid {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.four-grid {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.five-grid {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    padding: 30px 50px; 
+    height: 80%;
+}
+
+.width-400 {
+    width: 400px;
+}
+.width-300 {
+    width: 300px;
+}
+.width-200 {
+    width: 200px;
+}
+.width-100 {
+    width: 100px;
+}
+
+.medium-font {
+    font-size: 14px;
+}
+.small-font {
+    font-size: 12px;
+}
+.large-font {
+    font-size: 20px;
+}
+.xlarge-font {
+    font-size: 30px;
+}
+.xxlarge-font {
+    font-size: 40px;
+}
+
+.bold-font {
+    font-weight: bold;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.justify-content-space-bw {
+    justify-content: space-between;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.text-align-left {
+    text-align: left;
+}
+.text-align-right {
+    text-align: right;
+}
+
+.background-color-transparent {
+    background-color: transparent;
+}
+
+.background-color-green {
+    background-color: #1ABC9C;
+}
+
+.font-color-white {
+    color: white;
+}
+
+.line-height-medium {
+    line-height: 22px;
+}
+
+/* Adding margin components */
+
+.margin-20-10 {
+    margin: 20px 10px;
+}
+
+.margin-left-100 {
+    margin-left: 100px;
+}
+
+.margin-right-100 {
+    margin-right: 100px;
+}
+
+/* Adding border components */
+
+.border-style-none {
+    border-style: none;
+}
+
+.border-color-transparent {
+    border-color: transparent;
+}
+
+
+/* Individual components */
+
+.header-dropdowns {
+    text-align: right; 
+    word-spacing: 10px; 
+}
+
+.sign-in-button {
+    word-spacing: normal; 
+    background-color: darkblue; 
+    color: white;
+    border-radius: 25px; 
+    padding: 5px 20px 5px;
+}
+
+

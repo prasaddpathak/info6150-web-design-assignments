@@ -1,0 +1,12 @@
+.fold3-container {
+    background-color: #EAEDED ; 
+    height: 40vh;
+    margin-bottom: 50px;
+}
+
+.fold3-cards {
+    border-radius: 15px; 
+    margin: 20px; 
+    padding: 15px;
+    background-color: white ;
+}

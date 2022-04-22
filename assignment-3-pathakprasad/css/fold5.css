@@ -1,0 +1,37 @@
+.fold5-container {
+    height: 60vh; 
+    margin: 80px 100px; 
+    text-align: center;
+}
+
+.fold5-cta-button {
+    padding: 10px 80px; 
+    font-size: 20px; 
+    border-radius: 40px; 
+    color: white; 
+    font-weight: bold; 
+    border-color: transparent; 
+    background-color: #2A29CE; 
+}
+
+.fold5-cta-button:hover {
+    border-color: black;
+    border-width: 5px;
+}
+
+.fold5-accordian-container {
+    margin: 0px 60px;
+}
+
+.fold5-accordian-cards {
+    text-align: left !important;
+    padding: 20px 30px ; 
+    border-radius: 10px !important; 
+    border-style: solid; 
+    border-radius: 1px; 
+    border-color: #3498DB;
+}
+
+.bold-font::selection {
+    background-color:aquamarine ;
+}

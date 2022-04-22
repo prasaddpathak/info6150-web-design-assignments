@@ -1,0 +1,25 @@
+.fold6-container {
+    height: 60vh; 
+    margin: 80px 100px 20px 100px; 
+    text-align: center;
+}
+
+.fold6-left-section {
+    text-align: left !important; 
+    margin: 50px 80px;;
+}
+
+.fold6-right-section {
+    text-align: right; 
+    margin: 0px 100px;
+}
+
+.fold6-nav-button {
+    height: 45px; 
+    width: 40px; 
+    background-color: #2A29CE; 
+    color: white; 
+    font-size: 30px; 
+    border-color: transparent; 
+    border-radius: 5px;
+}

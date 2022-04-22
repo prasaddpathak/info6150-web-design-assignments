@@ -1,0 +1,86 @@
+/*  
+    Author:     Prasad A. Pathak
+    NEU ID:     002925486
+    Email:      pathak.pra@northeastern.edu
+    Subject:    INFO6150 - Web Design and UX
+    Purpose:    SCSS File containing code required for components of the webpage like dropdowns and buttons
+*/
+
+//Contains SCSS required for Navbar Components
+.nav-bar-dropdowns {
+    @include border-layout(0, none, 0, 0);
+    @include font-layout(14);
+}
+
+.nav-bar-dropdowns-blue {
+    @include border-layout(0, none, 0, 0);
+    @include font-layout(14);
+    @include font-color($blue);
+    font-weight: bold;
+}
+
+.sign-in-button {
+    @include word-layout(normal);
+    @include background-color($blue); 
+    @include font-color(white);
+    @include border-layout(0,none,25,0); 
+    @include padding-layout(5,20,5,20);
+}
+
+.sign-in-button:hover {
+    cursor: pointer;
+}
+
+//Contains SCSS required for Fold 1 components
+.fold1-input-button {
+    @include margin-layout(20,0,20,0);
+    @include padding-layout(8,120,8,120);
+    @include font-layout(15); 
+    @include font-color(white);
+    @include background-color($blue);
+    @include border-layout(0,none,10,0); 
+}
+
+.fold1-input-button:hover {
+    cursor: pointer;
+}
+
+.fold1-right-container-button {
+    @include border-layout(1,solid,25,white);
+    @include padding-layout(10,30,10,30);
+    @include background-color($green);
+    @include font-layout(20);
+    @include font-color(white);
+}
+
+.fold1-right-container-button:hover {
+    cursor: pointer;
+}
+
+.fold1-input-tab-blue {
+    @include background-color(transparent);
+    @include border-layout(0,none,0,transparent);
+    @include font-color(white);
+    @include text-align(center);
+}
+
+.fold1-input-tab-green {
+    @include background-color($green);
+    @include border-layout(0,none,0,transparent);
+    @include font-color(white);
+    @include text-align(center);
+}
+
+//Contains SCSS required for Fold 2 components
+.fold2-viewall-button {
+    @include margin-layout(15,0,0,0);
+    @include padding-layout(15,100,15,100);
+    @include font-layout(20);
+    @include font-color(white);
+    @include border-layout(0,none,40,transparent);
+    @include background-color($blue);
+}
+
+.fold2-viewall-button:hover {
+    cursor: pointer;
+}
