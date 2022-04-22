@@ -1,0 +1,60 @@
+/*  
+    Author:     Prasad A. Pathak
+    NEU ID:     002925486
+    Email:      pathak.pra@northeastern.edu
+    Subject:    INFO6150 - Web Design and UX
+    Purpose:    SCSS file for the App React component
+*/
+@import '_variables'; 
+
+body {
+    font-family: $font;
+    color: $off-white;
+    background-color: $matte-black;
+}
+
+.title {
+    text-align: center;
+}
+
+.container {
+    padding: 30px;
+    width: 60%;
+    height: auto;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    justify-content: center;
+    border: 5px solid $light-blue ;
+    border-radius: 40px;
+}
+
+.button-container {
+    padding: 20px;
+    width: 60%;
+    height: 100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+button {
+    align-self: center;
+    width: 80%;
+    margin: 10px;
+    height: 40%;
+    padding: 7px;
+    background-color: $light-blue;
+    color: $dark-blue ;
+    border: 0 none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 40px;
+}
+
+button:hover {
+    background-color: $light-green;
+    color: $medium-green;
+    cursor: pointer;
+}
